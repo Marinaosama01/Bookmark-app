@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/index.css">
+    </head>
+
+    <body>
+
+    
+
+
+
+
+        <h1 class="text-center py-3 position-relative">Bookmarker</h1>
+
+        <div class=" doted container w-100 p-3 py-4 mt-5 d-flex flex-column justify-content-center align-items-center gap-4">
+    
+        <h2 class="gradient-text">
+            <i class="fa-solid fa-bookmark"></i>
+            Bookmark your favorite sites
+            <i class="fa-solid fa-bookmark"></i>
+          </h2>
+
+          <div
+          class="w-100 d-flex flex-column justify-content-center" >
+          <label for="bookmarkName" class="pb-2 fw-semibold">
+            <i class="fa-solid fa-book-bookmark pe-2"></i> Site Name</label>
+            <input id="siteNameId" type="text" placeholder="Bookmark Name"class="form-control">
+        </div>
+
+        <div class=" w-100 d-flex flex-column justify-content-center">
+          <label for="bookmarkURL" class="pb-2 fw-semibold">
+            <i class="fa-solid fa-link pe-2"></i>Site URL</label >
+            <input id="siteUrlId" type="url" placeholder="Website URL" class="form-control" />
+        </div>
+        <button onclick="addBook()" class="btn bg-danger book-btn sbtn" id="submitBtn">Submit</button>
+          
+    
+       
+    </div>
+
+    <!-- table -->
+    
+    <div class="container py-4">
+        <table class=" w-75  mx-auto  ">
+            <thead >
+                <th>Index</th>
+                <th>Website Name</th>
+                <th>Visit</th>
+                <th class="text-danger">Delete</th>
+            </thead>
+            <tbody id="tBody">
+
+            </tbody>
+        </table>
+          
+    </div>
+
+
+
+
+    <div class="overlay  position-fixed start-0 top-0 end-0 bottom-0 d-none justify-content-center align-items-center">
+        <div class="child container p-4 rounded-3 pb-2">
+        
+            <div class="d-flex justify-content-between pb-4 ">
+                <div class="circuls d-flex ">
+                    <span class="rounded-circle me-2"></span>
+                    <span class="rounded-circle me-2"></span>
+                    <span class="rounded-circle me-2"></span>
+                </div>
+                <span><i class="fa-solid fa-xmark esc fs-3  "></i></span>
+            </div>
+            <p class="m-0 pb-4 ">
+                Site Name or Url is not valid, Please follow the <br>
+                rules below :
+            </p>
+            <ol class="ps-2">
+                <li class="d-flex ">
+                    <i class="fa-regular fa-circle-right me-2 ms-0 pt-2"></i>
+                    <p>Site name must contain at least 3 characters</p>
+               </li>
+                <li class="d-flex ">
+                    <i class="fa-regular fa-circle-right me-2 ms-0 pt-1"></i>
+                    <p>Site URL must be a valid one</p>
+               </li>
+            </ol>
+        </div>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    
+        <script src="js/indexxxx.js"></script>
+    </body>
+</html>
